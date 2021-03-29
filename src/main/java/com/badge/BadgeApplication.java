@@ -1,4 +1,4 @@
-package com.quan;
+package com.badge;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

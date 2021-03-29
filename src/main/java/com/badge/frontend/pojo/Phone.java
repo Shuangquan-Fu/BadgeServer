@@ -1,4 +1,4 @@
-package com.quan.pojo;
+package com.badge.frontend.pojo;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
