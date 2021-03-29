@@ -13,9 +13,10 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name="badge")
-public class Badge extends MetaData {
+public class Badge {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     protected String mac_address;

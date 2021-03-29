@@ -23,9 +23,10 @@ public class AndroidDataServiceImpl implements AndroidDeviceService {
 
     @Override
     public boolean login(Badge badge) {
-        Badge user = badgeRepository.findByBadge_idAndPassword(badge.getBadge_id(), AES.Decryption.decrypt(badge.getPassword(),
+//        Badge user = badgeRepository(badge.getBadge_id(), AES.Decryption.decrypt(badge.getPassword(),
+//                GlobalParameters.Encryption.secretKey,"MD5"));
+        Badge user = badgeRepository.findByIdAndPassword(badge.getId(),AES.Decryption.decrypt(badge.getPassword(),
                 GlobalParameters.Encryption.secretKey,"MD5"));
-
         if (user == null){
             return false;
         }else{

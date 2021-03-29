@@ -4,20 +4,24 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Setter
 @Getter
 @Entity
-@Table(name="")
-public class QRCode extends MetaData{
+@Table(name="QRCode")
+public class QRCode {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     protected String QRCode;
+    @Transient
+    protected String type;
+    @Column(name = "badge_id")
+    protected Integer badge_id;
+    @Column(name="dataset_id")
+    protected Integer dataset_id;
 }
