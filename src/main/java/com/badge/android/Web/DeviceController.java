@@ -18,7 +18,7 @@ public class DeviceController{
     AndroidDeviceService androidDeviceService;
 
     @GetMapping(value="/login")
-    public Object login(@RequestBody , HttpSession session){
+    public Object login(@RequestBody GSon, HttpSession session){
 
 
 

@@ -17,17 +17,22 @@ public class Movement  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
     @Column(name = "x")
     protected float x;
+
     @Column(name = "y")
     protected float y;
+
     @Column(name = "z")
     protected float z;
 
     @Transient
     protected String type;
+
     @Column(name = "badge_id")
     protected Integer badge_id;
+
     @Column(name="dataset_id")
     protected Integer dataset_id;
 
