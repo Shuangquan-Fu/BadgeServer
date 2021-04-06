@@ -1,12 +1,12 @@
 package com.badge.android.Web;
 
+import com.badge.android.Entity.Utils.AndroidResponse;
 import com.badge.android.Service.AndroidDeviceService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 
@@ -16,16 +16,16 @@ import javax.servlet.http.HttpSession;
 public class DeviceController{
     @Autowired
     AndroidDeviceService androidDeviceService;
+    @Autowired
+    AndroidResponse androidResponse;
+
+    ObjectMapper mapper = new ObjectMapper();
 
     @GetMapping(value="/login")
-    public Object login(@RequestBody GSon, HttpSession session){
-
-
-
+    @ResponseBody // 服务器返回json
+    public String login(HttpSession session){
+        return "jj";
     }
-
-    
-
 
 
 

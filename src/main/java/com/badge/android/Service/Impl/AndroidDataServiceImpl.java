@@ -12,14 +12,14 @@ import org.springframework.stereotype.Service;
 public class AndroidDataServiceImpl implements AndroidDeviceService {
     @Autowired
     BadgeRepository badgeRepository;
-    @Autowired
-    MovementRepository movementRepository;
-    @Autowired
-    QRCodeRepository qrCodeRepository;
-    @Autowired
-    VoiceRepository voiceRepository;
-    @Autowired
-    NearMobilesRepository nearMobilesRepository;
+//    @Autowired
+//    MovementRepository movementRepository;
+//    @Autowired
+//    QRCodeRepository qrCodeRepository;
+//    @Autowired
+//    VoiceRepository voiceRepository;
+//    @Autowired
+//    NearMobilesRepository nearMobilesRepository;
 
     @Override
     public boolean login(Badge badge) {
@@ -34,23 +34,23 @@ public class AndroidDataServiceImpl implements AndroidDeviceService {
         }
     }
 
-    @Override
-    public void saveMovement(Movement movement) {
-        movementRepository.save(movement);
-    }
-
-    @Override
-    public void saveQRCode(QRCode qrCode) {
-        qrCodeRepository.save(qrCode);
-    }
-
-    @Override
-    public void saveVoice(Voice voice) {
-        voiceRepository.save(voice);
-    }
-
-    @Override
-    public void saveNearMobiles(NearMobiles nearMobiles) {
-        nearMobilesRepository.save(nearMobiles);
-    }
+//    @Override
+//    public void saveMovement(Movement movement) {
+//        movementRepository.save(movement);
+//    }
+//
+//    @Override
+//    public void saveQRCode(QRCode qrCode) {
+//        qrCodeRepository.save(qrCode);
+//    }
+//
+//    @Override
+//    public void saveVoice(Voice voice) {
+//        voiceRepository.save(voice);
+//    }
+//
+//    @Override
+//    public void saveNearMobiles(NearMobiles nearMobiles) {
+//        nearMobilesRepository.save(nearMobiles);
+//    }
 }
